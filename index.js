@@ -20,8 +20,6 @@ var phone;
 var password;
 var withdrawPassword ;
 var agentAccount = null;
-var PORT = process.env.port || 5500
-
 
 app.use('/', express.static('public'));
 app.use('/public', express.static('public'));
@@ -93,7 +91,7 @@ app.post("/CreateAccount", urlencodedParser, async function(req,res){
 
 });
 
-app.listen(PORT, function(error){
+app.listen(function(error){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
 
 })
